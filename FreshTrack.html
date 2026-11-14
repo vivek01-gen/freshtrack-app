@@ -9,50 +9,71 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="FreshTrack">
-<link rel="manifest" href='data:application/manifest+json,%7B%22name%22%3A%22FreshTrack%22%2C%22short_name%22%3A%22FreshTrack%22%2C%22start_url%22%3A%22./FreshTrack.html%22%2C%22scope%22%3A%22./%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22#9CCF8B%22%2C%22theme_color%22%3A%22#9CCF8B%22%2C%22icons%22%3A[%7B%22src%22%3A%22data%3Aimage/svg+xml%2C%3Csvg%20xmlns='http%3A//www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ccircle%20cx='50'%20cy='50'%20r='45'%20fill='%2322C55E'/%3E%3Cpath%20d='M50%2025L50%2050L65%2060'%20stroke='white'%20stroke-width='6'%20stroke-linecap='round'%20fill='none'/%3E%3C/svg%3E%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image/svg+xml%22%7D%2C%7B%22src%22%3A%22data%3Aimage/svg+xml%2C%3Csvg%20xmlns='http%3A//www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ccircle%20cx='50'%20cy='50'%20r='45'%20fill='%2322C55E'/%3E%3Cpath%20d='M50%2025L50%2050L65%2060'%20stroke='white'%20stroke-width='6'%20stroke-linecap='round'%20fill='none'/%3E%3C/svg%3E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image/svg+xml%22%7D]%7D'>
+<link rel="icon" type="image/png" href="./logo.png">
+<link rel="apple-touch-icon" href="./logo.png">
+<link rel="manifest" href="./manifest.json">
+<!-- Legacy inline manifest fallback -->
+<link rel="alternate-manifest" href='data:application/manifest+json,%7B%22name%22%3A%22FreshTrack%22%2C%22short_name%22%3A%22FreshTrack%22%2C%22start_url%22%3A%22./FreshTrack.html%22%2C%22scope%22%3A%22./%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22#9CCF8B%22%2C%22theme_color%22%3A%22#9CCF8B%22%2C%22icons%22%3A[%7B%22src%22%3A%22data%3Aimage/svg+xml%2C%3Csvg%20xmlns='http%3A//www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ccircle%20cx='50'%20cy='50'%20r='45'%20fill='%2322C55E'/%3E%3Cpath%20d='M50%2025L50%2050L65%2060'%20stroke='white'%20stroke-width='6'%20stroke-linecap='round'%20fill='none'/%3E%3C/svg%3E%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image/svg+xml%22%7D%2C%7B%22src%22%3A%22data%3Aimage/svg+xml%2C%3Csvg%20xmlns='http%3A//www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ccircle%20cx='50'%20cy='50'%20r='45'%20fill='%2322C55E'/%3E%3Cpath%20d='M50%2025L50%2050L65%2060'%20stroke='white'%20stroke-width='6'%20stroke-linecap='round'%20fill='none'/%3E%3C/svg%3E%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image/svg+xml%22%7D]%7D'>
 <title>FreshTrack</title>
 <style>
 :root {
   --pista: #9ccf8b;
   --pista-dark: #7caf6d;
-  --dark-green: #1b4d1f;
-  --accent: #00c897;
-  --accent2: #22c55e;
-  --fresh: #22c55e;
+  --dark-green: #14532d;
+  --accent: #15803d;
+  --accent-soft: rgba(21, 128, 61, 0.12);
+  --accent2: #16a34a;
+  --fresh: #16a34a;
   --fresh-bg: #dcfce7;
-  --soon: #f59e0b;
-  --soon-bg: #fef9c3;
-  --today: #ef4444;
-  --today-bg: #fee2e2;
+  --fresh-text: #14532d;
+  --soon: #d97706;
+  --soon-bg: #fef3c7;
+  --soon-text: #92400e;
+  --today: #ea580c;
+  --today-bg: #ffedd5;
+  --today-text: #9a3412;
   --expired: #dc2626;
-  --expired-bg: #fecaca;
-  --bg: #f7fff8;
+  --expired-bg: #fee2e2;
+  --expired-text: #991b1b;
+  --bg: #f4fbf4;
   --surface: #ffffff;
-  --text: #0f2f24;
-  --muted: #4a6f62;
-  --border: #dceadd;
-  --surface-variant: #cfe8c9;
-  --nav-bg: #9ccf8b;
-  --nav-text: #1b4d1f;
-  --fab-bg: #00c897;
+  --text: #0d2e1a;
+  --muted: #355e49;
+  --border: #d6e8d6;
+  --surface-variant: #e8f5e9;
+  --nav-bg: #ffffff;
+  --nav-text: #14532d;
+  --fab-bg: #15803d;
   --radius: 24px;
   --font:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
     Cantarell, sans-serif;
 }
 .dark {
-  --bg: #0f201b;
-  --surface: #1b352b;
-  --text: #e2e8f0;
-  --muted: #8ba59b;
-  --border: #264c3e;
-  --surface-variant: #264c3e;
+  --bg: #0a160f;
+  --surface: #13261c;
+  --text: #f0fdf4;
+  --muted: #94b8a6;
+  --border: #234935;
+  --surface-variant: #1b3628;
+  --accent: #34d399;
+  --accent-soft: rgba(52, 211, 153, 0.16);
+  --accent2: #22c55e;
+  --fresh: #22c55e;
   --fresh-bg: #0d2818;
+  --fresh-text: #86efac;
+  --soon: #fbbf24;
   --soon-bg: #2a1f06;
+  --soon-text: #fde68a;
+  --today: #f97316;
   --today-bg: #2a0f06;
-  --expired-bg: #1a0a0a;
-  --nav-bg: #9ccf8b;
-  --nav-text: #1b4d1f;
+  --today-text: #fdba74;
+  --expired: #f87171;
+  --expired-bg: #2b0b0b;
+  --expired-text: #fca5a5;
+  --nav-bg: #13261c;
+  --nav-text: #f0fdf4;
+  --fab-bg: #16a34a;
 }
 * {
   margin: 0;
@@ -60,28 +81,55 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
 body {
   font-family: var(--font);
   background: #e8f5e9;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  align-items: stretch;
+  height: 100%;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 .app-container {
   width: 100%;
   max-width: 480px;
-  min-height: 100vh;
+  height: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
   background: var(--bg);
   color: var(--text);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+}
+@media (min-width: 768px) {
+  .app-container {
+    max-width: 600px;
+    box-shadow: 0 8px 48px rgba(0, 0, 0, 0.12);
+  }
+  .bottom-nav {
+    max-width: 600px !important;
+  }
 }
 .screen {
   display: none;
   flex-direction: column;
-  min-height: 100vh;
-  animation: fadeIn 0.3s ease;
+  width: 100%;
+  height: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.18s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .screen.active {
   display: flex;
@@ -89,7 +137,7 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(4px);
   }
   to {
     opacity: 1;
@@ -106,7 +154,7 @@ body {
 }
 @keyframes scaleIn {
   from {
-    transform: scale(0.8);
+    transform: scale(0.96);
     opacity: 0;
   }
   to {
@@ -121,7 +169,7 @@ body {
 }
 @keyframes toastIn {
   from {
-    transform: translateY(100px);
+    transform: translateY(12px);
     opacity: 0;
   }
   to {
@@ -158,9 +206,9 @@ body {
   letter-spacing: -2px;
 }
 .splash-tagline {
-  font-size: 11px;
-  color: #00c897;
-  font-weight: 700;
+  font-size: 12px;
+  color: #0d4a22;
+  font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -225,14 +273,14 @@ body {
 .onboard-btn.primary {
   background: linear-gradient(135deg, #00c897, #22c55e);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 200, 151, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .onboard-btn.primary:active {
   transform: scale(0.95);
 }
 .onboard-btn.secondary {
   background: rgba(0, 200, 151, 0.12);
-  color: #00c897;
+  color: var(--accent, #15803d);
 }
 .app-header {
   display: flex;
@@ -266,7 +314,7 @@ body {
   line-height: 1.2;
 }
 .header-text p {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
   font-weight: 600;
   letter-spacing: 0.3px;
@@ -279,7 +327,7 @@ body {
   height: 36px;
   border: none;
   border-radius: 12px;
-  background: rgba(0, 200, 151, 0.1);
+  background: rgba(0, 0, 0, 0.05);
   color: var(--text);
   cursor: pointer;
   display: flex;
@@ -312,26 +360,30 @@ body {
   transform: scale(0.9);
 }
 .main-scroll {
-  flex: 1;
-  overflow-y: auto;
-  padding-bottom: 90px;
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+  overflow-y: auto !important;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+  overscroll-behavior-y: contain;
+  padding-bottom: calc(115px + env(safe-area-inset-bottom, 16px));
 }
 .bottom-nav {
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   width: 100%;
-  max-width: 480px;
+  max-width: 100%;
+  transform: none;
   background: var(--surface);
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: space-around;
-  padding: 10px 0 calc(10px + env(safe-area-inset-bottom, 0px));
+  padding: 8px 0 calc(8px + env(safe-area-inset-bottom, 0px));
   z-index: 100;
-  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.05);
 }
 .nav-item {
   display: flex;
@@ -352,7 +404,10 @@ body {
   letter-spacing: 0.3px;
 }
 .nav-item.active {
-  color: #00c897;
+  color: var(--accent, #15803d);
+}
+.dark .nav-item.active {
+  color: #34d399;
 }
 .nav-item:active {
   transform: scale(0.9);
@@ -370,30 +425,44 @@ body {
   height: 100%;
 }
 .nav-item.active .nav-icon {
-  color: #00c897;
+  color: var(--accent, #15803d);
+}
+.dark .nav-item.active .nav-icon {
+  color: #34d399;
 }
 .fab {
-  position: fixed;
-  bottom: 76px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #00c897, #22c55e);
+  position: absolute;
+  right: 20px;
+  bottom: calc(76px + env(safe-area-inset-bottom, 12px));
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #16a34a, #15803d);
   border: none;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 6px 24px rgba(0, 200, 151, 0.45);
-  z-index: 50;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  z-index: 40;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s;
-  max-width: 480px;
+  transition: transform 0.18s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.18s;
+}
+.fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
 }
 .fab:active {
-  transform: translateX(-50%) scale(0.9);
+  transform: scale(0.92);
+}
+@media (max-width: 360px) {
+  .fab {
+    right: 14px;
+    bottom: calc(70px + env(safe-area-inset-bottom, 8px));
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
 }
 .fab .icon {
   width: 28px;
@@ -413,7 +482,7 @@ body {
 .stat-card {
   border-radius: 20px;
   padding: 14px;
-  min-width: 140px;
+  min-width: 110px; max-width: 160px; flex: 1 0 110px;
   flex-shrink: 0;
   border: 1.5px solid;
   cursor: pointer;
@@ -458,42 +527,67 @@ body {
   color: var(--text);
 }
 .stat-sub {
-  font-size: 9px;
+  font-size: 11px;
+  font-weight: 600;
   color: var(--muted);
-  margin-top: 1px;
+  margin-top: 2px;
 }
 .quick-actions {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   padding: 4px 16px 12px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
-.quick-actions::-webkit-scrollbar {
-  display: none;
-}
-.quick-actions button {
+.quick-actions::-webkit-scrollbar { display: none; }
+.quick-actions button, .qa-btn {
   display: flex;
   align-items: center;
   gap: 7px;
-  border: none;
-  padding: 9px 16px;
-  border-radius: 16px;
+  border: 1px solid transparent;
+  padding: 8px 14px;
+  border-radius: 14px;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.2s;
+  transition: transform 120ms cubic-bezier(0.23, 1, 0.32, 1), background-color 150ms ease;
   flex-shrink: 0;
-  min-height: 40px;
+  min-height: 42px;
 }
-.quick-actions button:active {
-  transform: scale(0.95);
+.qa-delete {
+  background: #fee2e2 !important;
+  color: #991b1b !important;
+  border-color: #fecaca !important;
 }
-.quick-actions button .icon {
-  width: 16px;
-  height: 16px;
+.qa-export {
+  background: #dcfce7 !important;
+  color: #14532d !important;
+  border-color: #bbf7d0 !important;
+}
+.qa-import {
+  background: #e0f2fe !important;
+  color: #075985 !important;
+  border-color: #bae6fd !important;
+}
+.dark .qa-delete {
+  background: #2b0b0b !important;
+  color: #fca5a5 !important;
+  border-color: #4a1515 !important;
+}
+.dark .qa-export {
+  background: #0d2818 !important;
+  color: #86efac !important;
+  border-color: #1b4d28 !important;
+}
+.dark .qa-import {
+  background: #082838 !important;
+  color: #7dd3fc !important;
+  border-color: #0c3e57 !important;
+}
+.qa-btn:active {
+  transform: scale(0.97);
 }
 .search-bar {
   display: flex;
@@ -580,7 +674,7 @@ body {
 }
 .filter-chip.active {
   background: #00c897;
-  border-color: #00c897;
+  border-color: var(--accent, #15803d);
   color: #fff;
 }
 .filter-chip:active {
@@ -596,15 +690,19 @@ body {
   align-items: center;
   padding: 10px 16px 6px;
 }
-.section-header h3 {
+.section-header h2, .section-header h3 {
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 800;
   color: var(--text);
+  margin: 0;
 }
-.section-header span {
-  font-size: 10px;
+.section-header span, .item-count-badge {
+  font-size: 12px;
   color: var(--muted);
   font-weight: 700;
+  background: var(--surface-variant);
+  padding: 3px 10px;
+  border-radius: 12px;
 }
 .item-card {
   background: var(--surface);
@@ -664,7 +762,7 @@ body {
   text-overflow: ellipsis;
 }
 .item-meta {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--muted);
   margin-top: 2px;
   font-weight: 600;
@@ -691,7 +789,7 @@ body {
   gap: 3px;
   padding: 3px 8px;
   border-radius: 8px;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   margin-top: 6px;
 }
@@ -708,7 +806,7 @@ body {
   background: rgba(0, 0, 0, 0.04);
   border-radius: 10px;
   padding: 6px 10px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   cursor: pointer;
   display: flex;
@@ -777,7 +875,7 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 4px 12px rgba(0, 200, 151, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   min-height: 36px;
 }
 .empty-cta:active {
@@ -795,14 +893,14 @@ body {
   padding: 14px 16px;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 0 2px 12px rgba(0, 200, 151, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 }
 .sl-dcard:active {
   transform: scale(0.97);
 }
 .dark .sl-dcard {
   background: #131f1c;
-  border-color: rgba(0, 200, 151, 0.1);
+  border-color: rgba(0, 0, 0, 0.05);
 }
 .sl-dicon {
   width: 44px;
@@ -853,7 +951,7 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
-  box-shadow: 0 2px 8px rgba(0, 200, 151, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   min-height: 36px;
 }
 .sl-dcreate:active {
@@ -904,12 +1002,12 @@ body {
   margin: 6px 12px;
   border-radius: 18px;
   background: var(--surface);
-  border: 1.5px solid rgba(0, 200, 151, 0.25);
+  border: 1.5px solid rgba(0, 0, 0, 0.06);
   padding: 8px 10px;
   display: flex;
   gap: 5px;
   align-items: center;
-  box-shadow: 0 2px 16px rgba(0, 200, 151, 0.1);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
 }
 .dark .sl-add-bar {
   background: #1b352b;
@@ -932,8 +1030,8 @@ body {
   height: 28px;
   min-width: 28px;
   border-radius: 50%;
-  border: 1.5px solid rgba(0, 200, 151, 0.3);
-  background: rgba(0, 200, 151, 0.08);
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.04);
   color: var(--text);
   cursor: pointer;
   display: flex;
@@ -970,12 +1068,12 @@ body {
   display: flex;
   align-items: center;
   gap: 2px;
-  border: 1.5px solid rgba(0, 200, 151, 0.25);
+  border: 1.5px solid rgba(0, 0, 0, 0.06);
   background: rgba(0, 200, 151, 0.06);
   color: var(--text);
   border-radius: 8px;
   padding: 6px 6px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
@@ -1010,7 +1108,7 @@ body {
 }
 .sl-unit-dropdown.show {
   display: block;
-  animation: scaleIn 0.15s ease;
+  animation: scaleIn 0.16s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .sl-unit-opt {
   padding: 6px 12px;
@@ -1027,7 +1125,7 @@ body {
 }
 .sl-unit-opt:hover,
 .sl-unit-opt:active {
-  background: rgba(0, 200, 151, 0.1);
+  background: rgba(0, 0, 0, 0.05);
 }
 .sl-add-price {
   width: 56px;
@@ -1058,7 +1156,7 @@ body {
   justify-content: center;
   flex-shrink: 0;
   transition: all 0.2s;
-  box-shadow: 0 2px 8px rgba(0, 200, 151, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 .sl-add-btn:active {
   transform: scale(0.9);
@@ -1108,7 +1206,7 @@ body {
 }
 .sl-pcb.checked {
   background: #00c897;
-  border-color: #00c897;
+  border-color: var(--accent, #15803d);
 }
 .sl-pcb.checked .icon {
   color: #fff;
@@ -1178,7 +1276,7 @@ body {
   border: none;
   border-radius: 8px;
   padding: 6px 10px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
@@ -1194,7 +1292,7 @@ body {
 }
 .sl-action-btn.edit {
   background: rgba(0, 200, 151, 0.12);
-  color: #00c897;
+  color: var(--accent, #15803d);
 }
 .sl-action-btn.danger {
   background: rgba(239, 68, 68, 0.12);
@@ -1219,7 +1317,7 @@ body {
 }
 .dark .sl-psummary {
   background: rgba(27, 53, 43, 0.9);
-  border-color: rgba(0, 200, 151, 0.1);
+  border-color: rgba(0, 0, 0, 0.05);
 }
 .sl-ps-total {
   font-size: 20px;
@@ -1227,7 +1325,7 @@ body {
   color: var(--text);
 }
 .sl-ps-count {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--muted);
   font-weight: 600;
 }
@@ -1272,7 +1370,7 @@ body {
   background: var(--surface);
   border-radius: 12px;
   padding: 8px 12px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
@@ -1290,7 +1388,7 @@ body {
 }
 .sl-share-btn.primary {
   background: #00c897;
-  border-color: #00c897;
+  border-color: var(--accent, #15803d);
   color: #fff;
 }
 .sl-toolbar {
@@ -1342,7 +1440,7 @@ body {
   background: rgba(255, 255, 255, 0.04);
 }
 .ana-label {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--muted);
   font-weight: 600;
 }
@@ -1362,7 +1460,7 @@ body {
 }
 .bar-label {
   width: 80px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--text);
   flex-shrink: 0;
@@ -1384,7 +1482,7 @@ body {
   min-width: 4px;
 }
 .bar-val {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--muted);
   width: 50px;
@@ -1441,9 +1539,9 @@ body {
   height: 16px;
 }
 .theme-btn.active {
-  border-color: #00c897;
-  background: rgba(0, 200, 151, 0.1);
-  color: #00c897;
+  border-color: var(--accent, #15803d);
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--accent, #15803d);
 }
 .theme-btn:active {
   transform: scale(0.95);
@@ -1460,7 +1558,7 @@ body {
   color: var(--text);
 }
 .setting-row .sub {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--muted);
   margin-top: 1px;
 }
@@ -1622,7 +1720,7 @@ body {
   min-height: 36px;
 }
 .form-input:focus {
-  border-color: #00c897;
+  border-color: var(--accent, #15803d);
 }
 .dark .form-input {
   background: rgba(255, 255, 255, 0.06);
@@ -1647,7 +1745,7 @@ body {
   border-radius: 14px;
   border: 1.5px solid var(--border);
   background: var(--surface);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
@@ -1659,9 +1757,9 @@ body {
   height: 14px;
 }
 .cat-chip.active {
-  border-color: #00c897;
-  background: rgba(0, 200, 151, 0.1);
-  color: #00c897;
+  border-color: var(--accent, #15803d);
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--accent, #15803d);
 }
 .cat-chip:active {
   transform: scale(0.95);
@@ -1695,7 +1793,7 @@ body {
 .btn-primary {
   background: linear-gradient(135deg, #00c897, #22c55e);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 200, 151, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .btn-danger {
   background: #ef4444;
@@ -1724,7 +1822,7 @@ body {
   background: var(--surface);
   border-radius: 24px;
   padding: 24px;
-  animation: scaleIn 0.2s ease;
+  animation: scaleIn 0.2s cubic-bezier(0.23, 1, 0.32, 1);
   max-height: 80vh;
   overflow-y: auto;
 }
@@ -1795,7 +1893,7 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  animation: scaleIn 0.2s ease;
+  animation: scaleIn 0.2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .dark .legal-content {
   background: #1b352b;
@@ -1848,8 +1946,8 @@ body {
   min-height: 36px;
 }
 .legal-tab.active {
-  color: #00c897;
-  border-bottom-color: #00c897;
+  color: var(--accent, #15803d);
+  border-bottom-color: var(--accent, #15803d);
 }
 .legal-body {
   padding: 20px;
@@ -1938,7 +2036,7 @@ body {
   margin: 12px 16px 8px;
 }
 .settings-group-title {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -2000,7 +2098,7 @@ body {
   color: var(--text);
 }
 .setting-row-sub {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--muted);
   margin-top: 1px;
 }
@@ -2072,7 +2170,7 @@ body {
   color: var(--text);
 }
 .lang-english {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--muted);
 }
 .theme-row {
@@ -2318,7 +2416,7 @@ body {
   background: rgba(0, 200, 151, 0.04);
 }
 .bs-item.active {
-  background: rgba(0, 200, 151, 0.08);
+  background: rgba(0, 0, 0, 0.04);
 }
 .bs-item .lang-flag {
   font-size: 26px;
@@ -2356,8 +2454,9 @@ body {
   transform: translateX(-50%);
   width: 100%;
   max-width: 480px;
-  background: #9ccf8b;
-  border-radius: 40px 40px 0 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-radius: 0;
   display: flex;
   justify-content: space-around;
   padding: 6px 0 env(safe-area-inset-bottom);
@@ -2413,18 +2512,12 @@ body {
   display: block;
 } /* ---- Progressive enhancement / polish ---- */
 
+/* Bounded height ensures main-scroll always triggers scroll */
 body,
 .app-container,
 .screen {
-  min-height: 100vh;
-}
-
-@supports (min-height: 100dvh) {
-  body,
-  .app-container,
-  .screen {
-    min-height: 100dvh;
-  }
+  height: 100%;
+  max-height: 100dvh;
 }
 
 body.modal-open .main-scroll {
@@ -2530,7 +2623,7 @@ body { overflow-x: hidden; }
 /* FAB */
 .fab {
   width: 56px; height: 56px;
-  box-shadow: var(--shadow-float);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
   border-radius: 18px;
   transition: transform .18s ease, opacity .2s ease;
 }
@@ -2686,17 +2779,26 @@ select:focus-visible, textarea:focus-visible {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
-/* ============ ANALYTICS REDESIGN ============ */
-
+/* ============ ANALYTICS REDESIGN (RESPONSIVE & OVERFLOW FIXED) ============ */
 .ana-2col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 12px;
   margin: 8px 16px;
+}
+@media (min-width: 600px) {
+  .ana-2col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.ana-2col > .analytics-card {
+  margin: 0 !important;
+  width: 100%;
+  box-sizing: border-box;
 }
 .ana-insight-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   margin: 8px 16px;
 }
@@ -2708,6 +2810,9 @@ select:focus-visible, textarea:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 .ana-insight-icon {
   width: 30px;
@@ -2724,13 +2829,77 @@ select:focus-visible, textarea:focus-visible {
   height: 16px;
 }
 .ana-insight-num {
-  font-size: 22px;
-  font-weight: 900;
+  font-size: clamp(17px, 4.5vw, 22px);
+  font-weight: 800;
   color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .ana-insight-label {
   font-size: 11px;
+  font-weight: 700;
   color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ana-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.ana-col {
+  min-width: 0;
+  overflow: hidden;
+  padding: 10px 4px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+}
+.dark .ana-col {
+  background: rgba(255, 255, 255, 0.05);
+}
+.ana-label {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ana-value {
+  font-size: clamp(15px, 3.8vw, 19px);
+  font-weight: 900;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ana-line-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  gap: 4px;
+  align-items: center;
+}
+.ana-pie-total {
+  font-size: 11px;
+  font-weight: 800;
+  fill: var(--text);
+}
+.ana-rank {
+  font-size: 11px;
+}
+.ana-top-date {
+  font-size: 11px;
+}
+.ana-top-meta {
+  font-size: 11px;
 }
 .ana-card-head {
   display: flex;
@@ -2744,7 +2913,7 @@ select:focus-visible, textarea:focus-visible {
 .ana-card-head .icon {
   width: 16px;
   height: 16px;
-  color: #00c897;
+  color: var(--accent, #15803d);
 }
 .ana-money-card {
   background: linear-gradient(135deg, #00c897, #22c55e) !important;
@@ -2779,7 +2948,7 @@ select:focus-visible, textarea:focus-visible {
 .ana-line-axis {
   display: flex;
   justify-content: space-between;
-  font-size: 9px;
+  font-size: 11px;
   color: var(--muted);
   gap: 4px;
   align-items: center;
@@ -2808,7 +2977,7 @@ select:focus-visible, textarea:focus-visible {
   stroke-width: 3.8;
 }
 .ana-pie-total {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 800;
   fill: var(--text);
 }
@@ -2882,7 +3051,7 @@ select:focus-visible, textarea:focus-visible {
   border-radius: 50%;
   background: #00c897;
   color: #fff;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 900;
   display: flex;
   align-items: center;
@@ -2890,7 +3059,7 @@ select:focus-visible, textarea:focus-visible {
   flex-shrink: 0;
 }
 .ana-top-date {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--muted);
   width: 58px;
@@ -2909,7 +3078,7 @@ select:focus-visible, textarea:focus-visible {
   text-overflow: ellipsis;
 }
 .ana-top-meta {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--muted);
 }
 .ana-top-val {
@@ -2924,12 +3093,13 @@ select:focus-visible, textarea:focus-visible {
   position: relative;
 }
 .sl-fab {
-  position: absolute;
-  bottom: 20px;
-  right: 16px;
+  position: fixed;
+  bottom: calc(76px + env(safe-area-inset-bottom, 10px));
+  right: max(20px, calc(50% - 220px));
   left: auto;
   transform: none;
   z-index: 60;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 .sl-fab .icon {
   width: 26px;
@@ -2977,27 +3147,33 @@ select:focus-visible, textarea:focus-visible {
 .sl-chip {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   border: 1.5px solid var(--border);
   background: var(--surface);
   color: var(--text);
-  border-radius: 12px;
-  padding: 6px 12px;
-  font-size: 10px;
+  border-radius: 14px;
+  padding: 6px 14px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.18s cubic-bezier(0.23, 1, 0.32, 1);
   white-space: nowrap;
   flex-shrink: 0;
-  min-height: 32px;
+  min-height: 38px;
 }
 .sl-chip:active {
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 .sl-chip.active {
-  border-color: #00c897;
-  background: rgba(0, 200, 151, 0.12);
-  color: #00c897;
+  border-color: var(--brand-primary, #15803d);
+  background: var(--surface-subtle, #f0fdf4);
+  color: var(--brand-primary, #15803d);
+  font-weight: 800;
+}
+.dark .sl-chip.active {
+  border-color: #34d399;
+  background: rgba(52, 211, 153, 0.16);
+  color: #34d399;
 }
 .sl-chip .icon {
   width: 12px;
@@ -3006,13 +3182,13 @@ select:focus-visible, textarea:focus-visible {
 .sl-chip-mini {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  font-size: 9px;
+  gap: 4px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--muted);
-  background: rgba(0, 0, 0, 0.04);
+  background: var(--surface-variant);
   border-radius: 8px;
-  padding: 3px 7px;
+  padding: 4px 8px;
   white-space: nowrap;
 }
 .dark .sl-chip-mini {
@@ -3046,7 +3222,7 @@ select:focus-visible, textarea:focus-visible {
   justify-content: center;
   gap: 4px;
   color: #fff;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
   opacity: 0;
   transition: opacity 0.2s;
@@ -3080,12 +3256,12 @@ select:focus-visible, textarea:focus-visible {
   border-radius: 20px;
   padding: 14px 16px;
   cursor: pointer;
-  box-shadow: 0 2px 12px rgba(0, 200, 151, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   transition: transform 0.2s;
 }
 .dark .sl-card {
   background: #131f1c;
-  border-color: rgba(0, 200, 151, 0.1);
+  border-color: rgba(0, 0, 0, 0.05);
 }
 .sl-card:active {
   transform: scale(0.98);
@@ -3140,7 +3316,7 @@ select:focus-visible, textarea:focus-visible {
   height: 14px;
 }
 .sl-card-dates {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--muted);
   margin-top: 2px;
   display: flex;
@@ -3153,8 +3329,8 @@ select:focus-visible, textarea:focus-visible {
   margin-top: 8px;
 }
 .sl-card-badges .sl-chip-mini {
-  background: rgba(0, 200, 151, 0.1);
-  color: #00c897;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--accent, #15803d);
 }
 .sl-card-progress {
   margin-top: 10px;
@@ -3201,8 +3377,8 @@ select:focus-visible, textarea:focus-visible {
   flex-wrap: wrap;
 }
 .sl-card-tags .sl-chip-mini {
-  background: rgba(0, 200, 151, 0.1);
-  color: #00c897;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--accent, #15803d);
 }
 .sl-card-actions {
   display: flex;
@@ -3253,7 +3429,7 @@ select:focus-visible, textarea:focus-visible {
   background: #ef4444;
 }
 .sl-act-tip {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   color: #fff;
 }
@@ -3305,7 +3481,7 @@ select:focus-visible, textarea:focus-visible {
 .sl-empty-bag .icon {
   width: 44px;
   height: 44px;
-  color: #00c897;
+  color: var(--accent, #15803d);
 }
 .sl-empty-check {
   position: absolute;
@@ -3319,7 +3495,7 @@ select:focus-visible, textarea:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 200, 151, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 .sl-empty-check .icon {
   width: 16px;
@@ -3356,7 +3532,7 @@ select:focus-visible, textarea:focus-visible {
   font-size: 12px;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 200, 151, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   min-height: 40px;
 }
 .sl-empty-cta:active {
@@ -3396,7 +3572,7 @@ select:focus-visible, textarea:focus-visible {
 .sl-tip-row .icon {
   width: 14px;
   height: 14px;
-  color: #00c897;
+  color: var(--accent, #15803d);
   flex-shrink: 0;
 }
 .sl-tpl-suggest {
@@ -3423,14 +3599,14 @@ select:focus-visible, textarea:focus-visible {
 }
 .sl-tpl-card:active {
   transform: scale(0.96);
-  border-color: #00c897;
+  border-color: var(--accent, #15803d);
 }
 .sl-tpl-ico {
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background: rgba(0, 200, 151, 0.1);
-  color: #00c897;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--accent, #15803d);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3462,7 +3638,7 @@ select:focus-visible, textarea:focus-visible {
   gap: 4px;
 }
 .sl-new-label {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
   color: var(--muted);
   text-transform: uppercase;
@@ -3492,9 +3668,9 @@ select:focus-visible, textarea:focus-visible {
   height: 18px;
 }
 .sl-pick-ico.active {
-  border-color: #00c897;
-  background: rgba(0, 200, 151, 0.1);
-  color: #00c897;
+  border-color: var(--accent, #15803d);
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--accent, #15803d);
 }
 .sl-pick-colors {
   display: flex;
@@ -3593,7 +3769,7 @@ select:focus-visible, textarea:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00c897;
+  color: var(--accent, #15803d);
   margin-bottom: 4px;
 }
 .sl-stat-ico .icon {
@@ -3609,7 +3785,7 @@ select:focus-visible, textarea:focus-visible {
   text-overflow: ellipsis;
 }
 .sl-stat-lbl {
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--muted);
   margin-top: 2px;
@@ -3622,7 +3798,7 @@ select:focus-visible, textarea:focus-visible {
   align-items: center;
   gap: 8px;
   margin-top: 8px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--muted);
 }
@@ -3668,7 +3844,7 @@ select:focus-visible, textarea:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00c897;
+  color: var(--accent, #15803d);
 }
 .sl-group-ico .icon {
   width: 14px;
@@ -3685,7 +3861,7 @@ select:focus-visible, textarea:focus-visible {
   white-space: nowrap;
 }
 .sl-group-meta {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--muted);
   white-space: nowrap;
@@ -3721,7 +3897,7 @@ select:focus-visible, textarea:focus-visible {
 .sl-item-qty {
   font-size: 12px;
   font-weight: 900;
-  color: #00c897;
+  color: var(--accent, #15803d);
   white-space: nowrap;
 }
 .sl-item-chips {
@@ -3731,7 +3907,7 @@ select:focus-visible, textarea:focus-visible {
   margin-top: 3px;
 }
 .sl-item-note {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--muted);
   margin-top: 3px;
   overflow: hidden;
@@ -3753,7 +3929,7 @@ select:focus-visible, textarea:focus-visible {
   overflow: hidden;
   flex-shrink: 0;
   position: relative;
-  background: rgba(0, 200, 151, 0.08);
+  background: rgba(0, 0, 0, 0.04);
 }
 .sl-photo-thumb img {
   width: 100%;
@@ -3795,7 +3971,7 @@ select:focus-visible, textarea:focus-visible {
   background: rgba(27, 53, 43, 0.6);
 }
 .sl-edit-2:focus {
-  border-color: #00c897;
+  border-color: var(--accent, #15803d);
 }
 .sl-editform {
   display: flex;
@@ -3873,7 +4049,7 @@ select:focus-visible, textarea:focus-visible {
   border: none;
   border-radius: 10px;
   background: rgba(0, 200, 151, 0.12);
-  color: #00c897;
+  color: var(--accent, #15803d);
   width: 34px;
   height: 34px;
   cursor: pointer;
@@ -3889,32 +4065,220 @@ select:focus-visible, textarea:focus-visible {
   display: inline-block;
 }
 
+
+/* Brand Logo & Presentation */
+.header-logo-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(22, 163, 74, 0.08);
+  border: 1px solid rgba(22, 163, 74, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 2px;
+}
+.header-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.35);
+  display: block;
+}
+.splash-logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(21, 128, 61, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  overflow: hidden;
+  padding: 8px;
+  border: 1px solid rgba(22, 163, 74, 0.18);
+}
+.splash-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.3);
+  display: block;
+}
+.about-ft-logo-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(22, 163, 74, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  overflow: hidden;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(21, 128, 61, 0.08);
+}
+.about-ft-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.35);
+  display: block;
+}
+
+/* Settings Navigation Hub Cards */
+.settings-nav-card {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin: 0 16px 10px;
+  cursor: pointer;
+  transition: transform 0.15s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.15s, border-color 0.15s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  min-height: 52px;
+}
+.settings-nav-card:hover {
+  background: var(--surface-subtle, #f0fdf4);
+  border-color: rgba(22, 163, 74, 0.3);
+}
+.settings-nav-card:active {
+  transform: scale(0.98);
+}
+.settings-nav-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.settings-nav-info {
+  flex: 1;
+  min-width: 0;
+}
+.settings-nav-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+.settings-nav-sub {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.35;
+  margin-top: 2px;
+}
+.settings-nav-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted, #355e49);
+  padding: 3px 8px;
+  border-radius: 8px;
+  background: var(--surface-variant, #e8f5e9);
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+.dark .settings-nav-value {
+  background: rgba(255, 255, 255, 0.08);
+  color: #a3c9b4;
+}
+.settings-nav-chevron {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+/* Sub-page section styling */
+.settings-subpage {
+  animation: fadeInSubpage 0.18s cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes fadeInSubpage {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.settings-notice-box {
+  margin: 10px 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(22, 163, 74, 0.08);
+  border: 1px solid rgba(22, 163, 74, 0.18);
+  font-size: 12px;
+  color: var(--dark-green, #14532d);
+  line-height: 1.45;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.dark .settings-notice-box {
+  background: rgba(22, 163, 74, 0.12);
+  border-color: rgba(22, 163, 74, 0.25);
+  color: #86efac;
+}
+.sort-picker-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 16px 12px;
+}
+.sort-picker-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.sort-picker-btn.active {
+  background: var(--surface-subtle, #f0fdf4);
+  border-color: var(--brand-primary, #15803d);
+  color: var(--brand-primary, #15803d);
+}
+.dark .sort-picker-btn.active {
+  background: rgba(22, 163, 74, 0.15);
+  border-color: #86efac;
+  color: #86efac;
+}
+
 </style>
 
 </head>
 <body>
 <div id="offlineBanner" style="display:none;align-items:center;justify-content:center;gap:8px;background:#FEF3C7;color:#92400E;font-size:12px;font-weight:700;padding:8px 16px;text-align:center;z-index:90"></div>
 <div class="app-container" id="app">
-<div class="screen splash-screen active" id="splashScreen">
-<div class="splash-logo"><svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="45" stroke="#22C55E" stroke-width="2.5"/><path d="M50 25L50 50L65 60" stroke="#22C55E" stroke-width="3.5" stroke-linecap="round"/><circle cx="50" cy="50" r="3" fill="#22C55E"/></svg></div>
+<div class="screen splash-screen active" id="splashScreen" onclick="skipSplash()" style="cursor:pointer" title="Click anywhere to continue">
+<div class="splash-logo"><img src="./logo.png" alt="FreshTrack" class="splash-logo-img" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='block'"><svg viewBox="0 0 100 100" fill="none" style="display:none"><circle cx="50" cy="50" r="45" stroke="#22C55E" stroke-width="2.5"/><path d="M50 25L50 50L65 60" stroke="#22C55E" stroke-width="3.5" stroke-linecap="round"/><circle cx="50" cy="50" r="3" fill="#22C55E"/></svg></div>
 <div class="splash-title">FreshTrack</div>
 <div class="splash-tagline" id="splashTagline">Grocery Assistant</div>
 <div class="splash-spinner"></div></div>
 <div class="screen onboard-screen" id="onboardScreen"><div class="onboard-card" id="onboardCard"></div></div>
 <div class="screen" id="homeScreen">
-<div class="app-header"><div class="header-logo-box"><svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="45" stroke="#22C55E" stroke-width="2.5"/><path d="M50 25L50 50L65 60" stroke="#22C55E" stroke-width="3.5" stroke-linecap="round"/><circle cx="50" cy="50" r="3" fill="#22C55E"/></svg></div><div class="header-text"><h1 id="headerTitle">FreshTrack</h1><p id="homeSubtitle">Never waste food again</p></div><div class="header-spacer"></div><button class="header-theme-btn" id="themeToggle" aria-label="Toggle theme" onclick="toggleTheme()"><span class="icon" style="width:18px;height:18px"></span></button></div>
+<div class="app-header"><div class="header-logo-box"><img src="./logo.png" alt="FreshTrack" class="header-logo-img" onerror="this.style.display='none';if(this.nextElementSibling)this.nextElementSibling.style.display='block'"><svg viewBox="0 0 100 100" fill="none" style="display:none"><circle cx="50" cy="50" r="45" stroke="#22C55E" stroke-width="2.5"/><path d="M50 25L50 50L65 60" stroke="#22C55E" stroke-width="3.5" stroke-linecap="round"/><circle cx="50" cy="50" r="3" fill="#22C55E"/></svg></div><div class="header-text"><h1 id="headerTitle">FreshTrack</h1><p id="homeSubtitle">Never waste food again</p></div><div class="header-spacer"></div><button class="header-theme-btn" id="themeToggle" aria-label="Toggle theme" onclick="toggleTheme()"><span class="icon" style="width:18px;height:18px"></span></button></div>
 <div class="main-scroll" id="homeScroll">
 <div class="stats-row" id="statsRow"></div>
 <div id="alertBanner" style="display:none;margin:6px 16px;padding:8px 14px;border-radius:14px;background:rgba(239,68,68,.12);border:1.2px solid #EF4444;font-size:11px;font-weight:700;color:#EF4444;align-items:center;gap:8px"></div>
-<div class="quick-actions"><button style="background:#FFECEB;color:#EF4444" onclick="showDeleteExpiredDialog()"><span class="icon" style="width:16px;height:16px"></span> <span id="bulkDeleteLabel">Bulk Delete</span></button><button style="background:#E6FAF4;color:#00C897" onclick="exportCSV()"><span class="icon" style="width:16px;height:16px"></span> <span id="csvLabel">Export CSV</span></button><button style="background:#ECFEFF;color:#06B6D4" onclick="document.getElementById('csvFileInput').click()"><span class="icon" style="width:16px;height:16px"></span> <span id="importCsvLabel">Import CSV</span></button></div>
+<div class="quick-actions"><button class="qa-btn qa-delete" onclick="showDeleteExpiredDialog()"><span class="icon" style="width:16px;height:16px"></span> <span id="bulkDeleteLabel">Bulk Delete</span></button><button class="qa-btn qa-export" onclick="exportCSV()"><span class="icon" style="width:16px;height:16px"></span> <span id="csvLabel">Export CSV</span></button><button class="qa-btn qa-import" onclick="document.getElementById('csvFileInput').click()"><span class="icon" style="width:16px;height:16px"></span> <span id="importCsvLabel">Import CSV</span></button></div>
 <div class="search-bar"><span class="search-icon"></span><input type="text" id="searchInput" placeholder="Search items..." oninput="onSearchInput()"><button class="clear-btn" id="searchClear" aria-label="Clear search" style="display:none" onclick="clearSearch()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
 <div class="filter-row" id="filterRow"></div>
-<div class="section-header"><h3 id="inventoryTitle">My Inventory</h3><span id="itemCountLabel">0 items</span></div>
+<div class="section-header"><h2 id="inventoryTitle" class="section-title">My Inventory</h2><span id="itemCountLabel" class="item-count-badge">0 items</span></div>
 <div id="itemsContainer"></div>
 </div>
 <button class="fab" id="fabAdd" aria-label="Add item" onclick="openAddItem()"><span class="icon" style="width:26px;height:26px"></span></button></div>
 <div class="screen" id="shoppingScreen">
-<div class="app-header"><button class="header-back" aria-label="Back to lists" onclick="closeShoppingList()"><span class="icon" style="width:18px;height:18px"></span></button><div class="header-text"><h1 id="shoppingTitle">Shopping List</h1><p id="shoppingSubtitle">Grocery Notepad</p></div></div>
+<div class="app-header"><button class="header-back" id="shoppingHeaderBack" aria-label="Back" onclick="shoppingHeaderBack()"><span class="icon" style="width:18px;height:18px"></span></button><div class="header-text"><h1 id="shoppingTitle">Shopping List</h1><p id="shoppingSubtitle">Grocery Notepad</p></div></div>
 <div class="main-scroll" id="shoppingScroll">
 <button class="fab sl-fab" id="shopFab" aria-label="Shopping actions" onclick="slFabOpen()" style="display:none"><span class="icon" style="width:26px;height:26px"></span></button>
 <div id="shoppingToolbar" style="display:none" class="sl-toolbar"></div>
@@ -3930,7 +4294,7 @@ select:focus-visible, textarea:focus-visible {
 <div class="main-scroll"><div id="analyticsContent"></div></div>
 </div>
 <div class="screen" id="settingsScreen">
-<div class="app-header"><button class="header-back" aria-label="Back to home" onclick="navigate('home')"><span class="icon" style="width:18px;height:18px"></span></button><div class="header-text"><h1 id="settingsTitle">Settings</h1><p id="settingsSubtitle">Configuration</p></div></div>
+<div class="app-header"><button class="header-back" id="settingsHeaderBack" aria-label="Back to home" onclick="settingsGoBack()"><span class="icon" style="width:18px;height:18px"></span></button><div class="header-text"><h1 id="settingsTitle">Settings</h1><p id="settingsSubtitle">Configuration</p></div></div>
 <div class="main-scroll"><div id="settingsContent"></div></div>
 </div>
 <div class="bottom-nav" id="bottomNav" role="navigation" aria-label="Main navigation"><button class="nav-item active" data-nav="home" onclick="navigate('home')"><span class="nav-icon" id="navHomeIcon"></span><span id="navHome">Home</span></button><button class="nav-item" data-nav="shopping" onclick="navigate('shopping')"><span class="nav-icon" id="navShoppingIcon"></span><span id="navShopping">Shopping</span></button><button class="nav-item" data-nav="analytics" onclick="navigate('analytics')"><span class="nav-icon" id="navAnalyticsIcon"></span><span id="navAnalytics">Analytics</span></button><button class="nav-item" data-nav="settings" onclick="navigate('settings')"><span class="nav-icon" id="navSettingsIcon"></span><span id="navSettings">Settings</span></button></div>
@@ -4267,6 +4631,26 @@ var CAT_LOC = {
 
 var t = {
   en: {
+    settingsTitle: "Settings",
+    settingsSubtitle: "Configuration & Preferences",
+    enabled: "Enabled",
+    disabled: "Disabled",
+    locked: "Active (PIN)",
+    unlocked: "Off",
+    regionalSettings: "Regional & Localization",
+    defaultSort: "Default Inventory Sorting",
+    sortByExpiry: "Expiry Date (Soonest first)",
+    sortByName: "Item Name (A to Z)",
+    sortByNewest: "Date Added (Newest first)",
+    sortUpdated: "Inventory sorting updated",
+    themeMode: "Theme Mode",
+    localNotificationsNotice: "100% Offline: Expiry reminders are calculated locally on your device and shown in the Home alert banner.",
+    storageOverview: "Storage Overview",
+    backupExport: "Backup & Export",
+    dataProtectionNotice: "Complete Privacy: All grocery inventory stays on this device. No external tracking or servers.",
+    maintenance: "Device Maintenance",
+    helpSupport: "Help & Support",
+    shareFeedback: "Share & Feedback",
     back: "Back",
     addItem: "Add Item",
     analytics: "Analytics",
@@ -14906,11 +15290,19 @@ var nextItemId = 1,
   nextListId = 1,
   nextShopItemId = 1;
 function tr(key) {
-  return (
-    (state.lang !== "en" && t[state.lang] && t[state.lang][key]) ||
-    t.en[key] ||
-    key
-  );
+  if (state.lang !== "en" && t[state.lang] && t[state.lang][key]) {
+    return t[state.lang][key];
+  }
+  if (t.en && t.en[key]) {
+    return t.en[key];
+  }
+  if (typeof key === "string" && key) {
+    return key
+      .replace(/([A-Z])/g, " $1")
+      .replace(/^./, function (s) { return s.toUpperCase(); })
+      .trim();
+  }
+  return key || "";
 }
 
 function fmt(tpl, data) {
@@ -15210,7 +15602,12 @@ function navigateBack() {
     navigate(navStack.pop(), false);
   }
 }
-setTimeout(function () {
+var splashTimer = null;
+function skipSplash() {
+  if (splashTimer) {
+    clearTimeout(splashTimer);
+    splashTimer = null;
+  }
   load();
   applyTheme();
   refreshUI();
@@ -15222,7 +15619,8 @@ setTimeout(function () {
   } else {
     navigate("home");
   }
-}, 2500);
+}
+splashTimer = setTimeout(skipSplash, 2000);
 function verifyPIN() {
   var v = document.getElementById("lockPinInput");
   if (v && v.value === state.lockPIN) {
@@ -15387,7 +15785,7 @@ function renderOnboarding() {
       ics("leaf", 46, 46) +
       '</div><h2 style=\"font-size:20px;font-weight:900\">' +
       tr("onboardWelcome") +
-      '</h2><p style=\"color:#00C897;font-weight:700;font-size:12px\">' +
+      '</h2><p style=\"color:var(--accent, #15803D);font-weight:700;font-size:12px\">' +
       tr("onboardTag") +
       '</p><p style=\"font-size:12px;line-height:1.5;margin-top:8px;color:#4A6F62\">' +
       tr("onboardDesc") +
@@ -15438,15 +15836,15 @@ function renderOnboarding() {
       tr("onboardReadyDesc") +
       '</p><div style=\"margin:16px 0;display:flex;justify-content:center;gap:12px\"><div style=\"text-align:center\"><div style=\"width:36px;height:36px;border-radius:10px;background:#E6FAF4;display:flex;align-items:center;justify-content:center;margin:0 auto 4px\">' +
       ics("package", 18, 18) +
-      '</div><div style=\"font-size:9px;color:#4A6F62\">' +
+      '</div><div style=\"font-size: 11px;color:#4A6F62\">' +
       tr("inventory") +
       '</div></div><div style=\"text-align:center\"><div style=\"width:36px;height:36px;border-radius:10px;background:#E6FAF4;display:flex;align-items:center;justify-content:center;margin:0 auto 4px\">' +
       ics("shopping", 18, 18) +
-      '</div><div style=\"font-size:9px;color:#4A6F62\">' +
+      '</div><div style=\"font-size: 11px;color:#4A6F62\">' +
       tr("shoppingList") +
       '</div></div><div style=\"text-align:center\"><div style=\"width:36px;height:36px;border-radius:10px;background:#E6FAF4;display:flex;align-items:center;justify-content:center;margin:0 auto 4px\">' +
       ics("analytics", 18, 18) +
-      '</div><div style=\"font-size:9px;color:#4A6F62\">' +
+      '</div><div style=\"font-size: 11px;color:#4A6F62\">' +
       tr("analytics") +
       "</div></div></div></div>";
   }
@@ -15584,7 +15982,7 @@ function renderHome() {
   document.getElementById("statsRow").innerHTML =
     '<div class=\"stat-card\" style=\"border-color:rgba(0,200,151,.3);background:' +
     (state.isDark ? "rgba(0,200,151,.08)" : "rgba(0,200,151,.04)") +
-    '\" onclick=\"setFilter(\'all\')\"><div class=\"stat-top\"><div class=\"stat-icon\" style=\"border-color:#00C897;color:#00C897\">' +
+    '\" onclick=\"setFilter(\'all\')\"><div class=\"stat-top\"><div class=\"stat-icon\" style=\"border-color:var(--accent, #15803D);color:var(--accent, #15803D)\">' +
     ics("package", 18, 18) +
     '</div><div class=\"stat-dot\" style=\"background:#00C897\"></div></div><div><div class=\"stat-count\" style=\"color:' +
     (state.isDark ? "#fff" : "#00C897") +
@@ -15661,6 +16059,13 @@ function clearSearch() {
 function renderItems() {
   var container = document.getElementById("itemsContainer");
   var items = state.items.slice();
+  if (state.sortBy === "name") {
+    items.sort(function(a,b){ return a.name.localeCompare(b.name); });
+  } else if (state.sortBy === "newest") {
+    items.sort(function(a,b){ return (b.id||0) - (a.id||0); });
+  } else {
+    items.sort(function(a,b){ return new Date(a.expiryDate) - new Date(b.expiryDate); });
+  }
   var s = state.search.toLowerCase();
   if (s)
     items = items.filter(function (i) {
@@ -15860,11 +16265,11 @@ function openAddItem() {
         item.photoBase64 +
         '\" style=\"width:76px;height:76px;border-radius:18px;object-fit:cover\">'
       : ics("camera", 28, 28)) +
-    '</div><div><button style=\"padding:8px 12px;border-radius:12px;border:1.5px solid #00C897;background:rgba(0,200,151,.12);color:#00C897;font-size:10px;font-weight:700;cursor:pointer\" onclick=\"document.getElementById(\'photoInput\').click()\">' +
+    '</div><div><button style=\"padding:8px 12px;border-radius:12px;border:1.5px solid #00C897;background:rgba(0,200,151,.12);color:var(--accent, #15803D);font-size: 11px;font-weight:700;cursor:pointer\" onclick=\"document.getElementById(\'photoInput\').click()\">' +
     ics("camera", 12, 12) +
     " " +
     tr("choosePhoto") +
-    '</button><p style=\"font-size:9px;color:#4A6F62;margin-top:4px\">' +
+    '</button><p style=\"font-size: 11px;color:#4A6F62;margin-top:4px\">' +
     tr("savedLocally") +
     '</p></div><input type=\"file\" id=\"photoInput\" accept=\"image/*\" style=\"display:none\" onchange=\"handlePhoto(event)\"></div></div><div class=\"form-group\"><label class=\"form-label\">' +
     ics("tag", 12, 12) +
@@ -16746,6 +17151,16 @@ function openShoppingList(id) {
   state.activeListId = id;
   renderShopping();
 }
+
+function shoppingHeaderBack() {
+  if (state.activeListId !== null) {
+    state.activeListId = null;
+    renderShopping();
+  } else {
+    navigate("home");
+  }
+}
+
 function closeShoppingList() {
   state.activeListId = null;
   renderShopping();
@@ -19301,7 +19716,7 @@ function shareAsDoc() {
 function printList() {
   var w = window.open("", "_blank");
   w.document.write(
-    '<html><head><meta charset="UTF-8"><style>body{font-family:Georgia,serif;padding:20px;color:#333}@media print{body{padding:0}}h1{color:#1B4D1F;border-bottom:2px solid #9CCF8B;padding-bottom:8px}table{width:100%;border-collapse:collapse;margin-top:12px}th{background:#9CCF8B;color:#1B4D1F;padding:6px;text-align:left;font-size:11px}td{padding:6px;border-bottom:1px solid #eee;font-size:11px}.total{font-size:16px;font-weight:700;color:#1B4D1F;text-align:right;margin-top:12px}.footer{font-size:10px;color:#999;margin-top:16px;border-top:1px solid #ddd;padding-top:6px}</style></head><body>' +
+    '<html><head><meta charset="UTF-8"><style>body{font-family:Georgia,serif;padding:20px;color:#333}@media print{body{padding:0}}h1{color:#1B4D1F;border-bottom:2px solid #9CCF8B;padding-bottom:8px}table{width:100%;border-collapse:collapse;margin-top:12px}th{background:#9CCF8B;color:#1B4D1F;padding:6px;text-align:left;font-size:11px}td{padding:6px;border-bottom:1px solid #eee;font-size:11px}.total{font-size:16px;font-weight:700;color:#1B4D1F;text-align:right;margin-top:12px}.footer{font-size: 11px;color:#999;margin-top:16px;border-top:1px solid #ddd;padding-top:6px}</style></head><body>' +
       getPrintHTML() +
       "</body></html>",
   );
@@ -19907,7 +20322,7 @@ function renderAnalytics() {
     "</button></div>";
   document.getElementById("anaStorageChart").innerHTML =
     sc ||
-    '<div style="font-size:10px;color:var(--muted);text-align:center;padding:12px">' +
+    '<div style="font-size: 11px;color:var(--muted);text-align:center;padding:12px">' +
       tr("noDataYet") +
       "</div>";
   document.getElementById("anaTopExpiring").innerHTML = te;
@@ -19986,416 +20401,300 @@ function exportAnalyticsCSV() {
   showToast(tr("csvExported"));
 }
 
+var currentSettingsSubPage = "main";
+
+function settingsGoBack() {
+  if (currentSettingsSubPage && currentSettingsSubPage !== "main") {
+    openSettingsSubPage("main");
+  } else {
+    navigate("home");
+  }
+}
+
+function openSettingsSubPage(page) {
+  currentSettingsSubPage = page || "main";
+  var titleEl = document.getElementById("settingsTitle");
+  var subEl = document.getElementById("settingsSubtitle");
+  var backBtn = document.getElementById("settingsHeaderBack");
+  if (currentSettingsSubPage === "main") {
+    if (titleEl) titleEl.textContent = tr("settingsTitle");
+    if (subEl) subEl.textContent = tr("settingsSubtitle");
+    if (backBtn) {
+      backBtn.setAttribute("aria-label", "Back to home");
+      backBtn.onclick = function () { navigate("home"); };
+    }
+  } else {
+    var titles = {
+      general: [tr("settingsGroupGeneral"), "App preferences and configuration"],
+      appearance: [tr("settingsGroupAppearance"), "Visual theme and interface styling"],
+      notifications: [tr("settingsGroupNotifications"), "Food expiry reminders and alerts"],
+      data: [tr("settingsGroupOffline"), "Inventory data, backup & storage"],
+      security: [tr("security"), "App protection and privacy preferences"],
+      about: [tr("settingsGroupAbout"), "App information, logo and details"]
+    };
+    var tInfo = titles[currentSettingsSubPage] || [tr("settingsTitle"), ""];
+    if (titleEl) titleEl.textContent = tInfo[0];
+    if (subEl) subEl.textContent = tInfo[1];
+    if (backBtn) {
+      backBtn.setAttribute("aria-label", "Back to settings");
+      backBtn.onclick = function () { openSettingsSubPage("main"); };
+    }
+  }
+  renderSettings();
+  var ms = document.querySelector("#settingsScreen .main-scroll");
+  if (ms) ms.scrollTop = 0;
+}
+
 function renderSettings() {
   applyTheme();
   refreshUI();
   var c = document.getElementById("settingsContent");
+  if (!c) return;
   var cL = state.lang;
   var curLang = LANG_FLAGS[cL] + " " + LANG_NATIVE[cL];
   var accentColors = {
     green: "#22C55E",
     blue: "#3B82F6",
     purple: "#8B5CF6",
-    orange: "#F97316",
+    orange: "#F97316"
   };
   var syms = { INR: "₹", USD: "$", EUR: "€", GBP: "£", JPY: "¥", CNY: "¥" };
   var curSym = syms[state.currency] || "₹";
   var html = "";
-  /* ---- 1. GENERAL ---- */
-  html +=
-    '<div class="settings-group"><div class="settings-group-title">' +
-    tr("settingsGroupGeneral") +
-    '</div><div class="settings-card">';
-  html +=
-    '<div class="setting-row" onclick="showLangSheet()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(0,200,151,.12);color:var(--accent)">' +
-    ics("globe", 16, 16) +
-    '</div><div class="setting-row-info"><div class="setting-row-label">' +
-    tr("language") +
-    '</div><div class="setting-row-sub">' +
-    tr("appLanguage") +
-    '</div></div></div><div class="setting-row-value">' +
-    curLang +
-    "</div>" +
-    ics("chevronRight", 16, 16) +
-    "</div>";
-  html +=
-    '<div class="setting-row" onclick="showCurrencyPicker()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(251,191,36,.12);color:#F59E0B">' +
-    ics("dollar", 16, 16) +
-    '</div><div class="setting-row-info"><div class="setting-row-label">' +
-    tr("currency") +
-    '</div><div class="setting-row-sub">' +
-    tr("currencyDesc") +
-    '</div></div></div><div class="setting-row-value">' +
-    curSym +
-    " " +
-    state.currency +
-    "</div>" +
-    ics("chevronRight", 16, 16) +
-    "</div>";
-  html +=
-    '<div class="setting-row" onclick="showDateFormatPicker()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(6,182,212,.12);color:#06B6D4">' +
-    ics("calendar", 16, 16) +
-    '</div><div class="setting-row-info"><div class="setting-row-label">' +
-    tr("dateFormat") +
-    '</div><div class="setting-row-sub">' +
-    tr("dateFormatDesc") +
-    '</div></div></div><div class="setting-row-value">' +
-    state.dateFormat +
-    "</div>" +
-    ics("chevronRight", 16, 16) +
-    "</div>";
-  html +=
-    '<div class="setting-row" onclick="showUnitPicker()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(139,92,246,.12);color:#8B5CF6">' +
-    ics("ruler", 16, 16) +
-    '</div><div class="setting-row-info"><div class="setting-row-label">' +
-    tr("measurement") +
-    '</div><div class="setting-row-sub">' +
-    tr("measurementDesc") +
-    '</div></div></div><div class="setting-row-value">' +
-    tr(state.measureUnit === "metric" ? "metricUnit" : "imperialUnit") +
-    "</div>" +
-    ics("chevronRight", 16, 16) +
-    "</div>";
-  html += "</div></div>";
-  /* ---- 2. APPEARANCE ---- */
-  html +=
-    '<div class="settings-group"><div class="settings-group-title">' +
-    tr("settingsGroupAppearance") +
-    '</div><div class="settings-card">';
-  html +=
-    '<div class="theme-row" style="padding:12px 16px 4px"><button class="theme-btn' +
-    (state.themeMode === "light" ? " active" : "") +
-    '" onclick="state.themeMode=\'light\';state.isDark=false;applyTheme();save();renderSettings()">' +
-    ics("sun", 22, 22) +
-    "<span>" +
-    tr("lightMode") +
-    '</span></button><button class="theme-btn' +
-    (state.themeMode === "dark" ? " active" : "") +
-    '" onclick="state.themeMode=\'dark\';state.isDark=true;applyTheme();save();renderSettings()">' +
-    ics("moon", 22, 22) +
-    "<span>" +
-    tr("darkMode") +
-    '</span></button><button class="theme-btn' +
-    (state.themeMode === "system" ? " active" : "") +
-    "\" onclick=\"state.themeMode='system';state.isDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches;applyTheme();save();renderSettings()\">" +
-    ics("monitor", 22, 22) +
-    "<span>" +
-    tr("systemTheme") +
-    "</span></button></div>";
-  html +=
-    '<div style="padding:8px 16px 0"><div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:8px">' +
-    tr("accentColor") +
-    '</div><div class="accent-row">';
-  ["green", "blue", "purple", "orange"].forEach(function (a) {
-    html +=
-      '<div class="accent-dot' +
-      (state.accentColor === a ? " active" : "") +
-      '" style="color:' +
-      accentColors[a] +
-      ";background:" +
-      accentColors[a] +
-      '22" onclick="state.accentColor=\'' +
-      a +
-      "';applyAccent();save();renderSettings()\">" +
-      (state.accentColor === a ? ics("check", 16, 16) : "") +
-      "</div>";
-  });
-  html += "</div></div>";
-  html +=
-    '<div style="padding:0 16px 8px"><div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:8px">' +
-    tr("fontSize") +
-    '</div><div class="font-row"><button class="font-btn s' +
-    (state.fontSize === "s" ? " active" : "") +
-    '" onclick="state.fontSize=\'s\';applyFont();save();renderSettings()">' +
-    tr("small") +
-    '</button><button class="font-btn m' +
-    (state.fontSize === "m" ? " active" : "") +
-    '" onclick="state.fontSize=\'m\';applyFont();save();renderSettings()">' +
-    tr("medium") +
-    '</button><button class="font-btn l' +
-    (state.fontSize === "l" ? " active" : "") +
-    '" onclick="state.fontSize=\'l\';applyFont();save();renderSettings()">' +
-    tr("large") +
-    "</button></div></div>";
-  html += "</div></div>";
-  /* ---- 3. NOTIFICATIONS ---- */
-  html +=
-    '<div class="settings-group"><div class="settings-group-title">' +
-    tr("settingsGroupNotifications") +
-    '</div><div class="settings-card">';
-  html +=
-    '<div class="setting-row"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(59,130,246,.12);color:#3B82F6">' +
-    ics("bell", 16, 16) +
-    '</div><div class="setting-row-info"><div class="setting-row-label">' +
-    tr("enableNotifications") +
-    '</div><div class="setting-row-sub">' +
-    tr("expiryReminder") +
-    '</div></div></div><div class="toggle-switch' +
-    (state.notificationsOn ? " on" : "") +
-    '" onclick="state.notificationsOn=!state.notificationsOn;this.classList.toggle(\'on\');save()"><div class="knob"></div></div></div>';
-  html +=
-    '<div style="padding:4px 16px 12px"><label style="font-size:11px;font-weight:600;color:var(--muted);display:block;margin-bottom:4px">' +
-    tr("notificationTime") +
-    '</label><input type="time" class="time-input" value="' +
-    state.notificationTime +
-    '" onchange="state.notificationTime=this.value;save()"></div>';
-  html +=
-    '<div style="padding:0 16px 12px"><div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px">' +
-    tr("remindBefore") +
-    '</div><div class="reminder-row">';
-  [1, 3, 7, 15, 30].forEach(function (d) {
-    var checked = state.reminderDays.indexOf(d) >= 0;
-    html +=
-      '<label><input type="checkbox"' +
-      (checked ? " checked" : "") +
-      ' onchange="var r=state.reminderDays;var idx=r.indexOf(' +
-      d +
-      ");if(idx>=0)r.splice(idx,1);else r.push(" +
-      d +
-      ');state.reminderDays=r.sort(function(a,b){return a-b});save()"> ' +
-      d +
-      " " +
-      tr("daysBefore") +
-      "</label>";
-  });
-  html += "</div></div></div></div>";
-  /* ---- 4. OFFLINE & DATA ---- */
-  html +=
-    '<div class="settings-group"><div class="settings-group-title">' +
-    tr("settingsGroupOffline") +
-    '</div><div class="settings-card">';
-  html +=
-    '<div class="setting-row" onclick="installApp()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(16,185,129,.12);color:#10B981">' +
-    ics("download", 16, 16) +
-    '</div><div class="setting-row-info"><div class="setting-row-label">' +
-    tr("installApp") +
-    '</div><div class="setting-row-sub">' +
-    tr("installAppDesc") +
-    '</div></div></div><div class="setting-row-value">' +
-    (pwaInstalled ? tr("installed") : tr("notInstalled")) +
-    "</div>" +
-    ics("chevronRight", 16, 16) +
-    "</div>";
-  html +=
-    '<div class="setting-row"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(59,130,246,.12);color:#3B82F6">' +
-    ics(navigator.onLine ? "wifi" : "offline", 16, 16) +
-    '</div><div class="setting-row-info"><div class="setting-row-label">' +
-    (navigator.onLine ? tr("online") : tr("offline")) +
-    '</div><div class="setting-row-sub">' +
-    tr("pwaDesc") +
-    '</div></div></div><div class="setting-row-value">' +
-    (navigator.onLine ? tr("online") : tr("offline")) +
-    "</div></div>";
-  html += '<div class="storage-info" id="storageInfo"></div>';
-  html +=
-    '<button class="setting-action-btn" onclick="exportBackup()">' +
-    ics("download", 16, 16) +
-    " " +
-    tr("exportBackup") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="document.getElementById(\'backupFileInput\').click()">' +
-    ics("upload", 16, 16) +
-    " " +
-    tr("importBackup") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="exportAllData()">' +
-    ics("archive", 16, 16) +
-    " " +
-    tr("exportAllData") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="exportCSV()">' +
-    ics("file", 16, 16) +
-    " " +
-    tr("csv") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="document.getElementById(\'csvFileInput\').click()">' +
-    ics("upload", 16, 16) +
-    " " +
-    tr("importCsv") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="showClearShoppingListsDialog()">' +
-    ics("shoppingBag", 16, 16) +
-    " " +
-    tr("clearShoppingLists") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="showDeleteExpiredDialog()">' +
-    ics("alertTriangle", 16, 16) +
-    " " +
-    tr("deleteExpiredQ") +
-    "</button>";
-  html +=
-    '<div class="setting-row"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(139,92,246,.12);color:#8B5CF6">' +
-    ics("refresh", 16, 16) +
-    '</div><div class="setting-row-info"><div class="setting-row-label">' +
-    tr("autoBackup") +
-    '</div><div class="setting-row-sub">' +
-    tr("autoBackupDesc") +
-    '</div></div></div><div class="toggle-switch' +
-    (state.autoBackup ? " on" : "") +
-    '" onclick="state.autoBackup=!state.autoBackup;this.classList.toggle(\'on\');save()"><div class="knob"></div></div></div>';
-  html += "</div></div>";
-  /* ---- 5. SUPPORT ---- */
-  html +=
-    '<div class="settings-group"><div class="settings-group-title">' +
-    tr("settingsGroupSupport") +
-    '</div><div class="settings-card">';
-  html +=
-    '<button class="setting-action-btn" onclick="openSupportPage(\'faq\')">' +
-    ics("helpCircle", 16, 16) +
-    " " +
-    tr("helpFaq") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="openSupportPage(\'contact\')">' +
-    ics("mail", 16, 16) +
-    " " +
-    tr("contactSupport") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="openSupportPage(\'bug\')">' +
-    ics("bug", 16, 16) +
-    " " +
-    tr("reportBug") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="openSupportPage(\'feature\')">' +
-    ics("sparkles", 16, 16) +
-    " " +
-    tr("featureRequest") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="showToast(\'' +
-    tr("ratingPrompt") +
-    "')\">" +
-    ics("star", 16, 16) +
-    " " +
-    tr("rateApp") +
-    "</button>";
-  html +=
-    "<button class=\"setting-action-btn\" onclick=\"if(navigator.share)navigator.share({title:'FreshTrack',text:'" +
-    tr("shareText") +
-    "',url:window.location.href}).catch(function(){})\">" +
-    ics("share", 16, 16) +
-    " " +
-    tr("shareApp") +
-    "</button>";
-  html +=
-    "<button class=\"setting-action-btn\" onclick=\"window.location.href='mailto:'+tr('supportEmail')+'?subject='+encodeURIComponent('FreshTrack')+'&body='+encodeURIComponent('" +
-    tr("shareText") +
-    "')\">" +
-    ics("send", 16, 16) +
-    " " +
-    tr("sendFeedback") +
-    "</button>";
-  html += "</div></div>";
-  /* ---- 6. LEGAL ---- */
-  html +=
-    '<div class="settings-group"><div class="settings-group-title">' +
-    tr("settingsGroupLegal") +
-    '</div><div class="settings-card">';
-  html +=
-    '<button class="setting-action-btn" onclick="openLegal(\'privacy\')">' +
-    ics("lock", 16, 16) +
-    " " +
-    tr("privacyPolicy") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="openLegal(\'terms\')">' +
-    ics("file", 16, 16) +
-    " " +
-    tr("termsOfService") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="openLegal(\'disclaimer\')">' +
-    ics("alertTriangle", 16, 16) +
-    " " +
-    tr("disclaimer") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="openLegal(\'safety\')">' +
-    ics("shield", 16, 16) +
-    " " +
-    tr("foodSafety") +
-    "</button>";
-  html += "</div></div>";
-  /* ---- 7. ABOUT FRESHTRACK ---- */
-  html +=
-    '<div class="settings-group"><div class="settings-group-title">' +
-    tr("settingsGroupAbout") +
-    '</div><div class="settings-card">';
-  html +=
-    '<div class="about-ft-card"><div class="about-ft-logo">' +
-    ics("leaf", 30, 30) +
-    '</div><div class="about-ft-name">' +
-    tr("appName") +
-    '</div><div class="about-ft-tag">' +
-    tr("aboutTagline") +
-    "</div></div>";
-  html +=
-    '<div class="setting-row" onclick="openAboutPage()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(0,200,151,.12);color:var(--accent)">' +
-    ics("info", 16, 16) +
-    '</div><div class="setting-row-info"><div class="setting-row-label">' +
-    tr("appVersion") +
-    '</div><div class="setting-row-sub">' +
-    tr("buildNumber") +
-    '</div></div></div><div class="setting-row-value">1.0</div>' +
-    ics("chevronRight", 16, 16) +
-    "</div>";
-  html += "</div></div>";
-  /* ---- SECURITY / ADVANCED (kept for existing features) ---- */
-  html +=
-    '<div class="settings-group"><div class="settings-group-title">' +
-    tr("security") +
-    '</div><div class="settings-card">';
-  html +=
-    '<div class="setting-row"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(239,68,68,.12);color:#EF4444">' +
-    ics("lock", 16, 16) +
-    '</div><div class="setting-row-info"><div class="setting-row-label">' +
-    tr("appLock") +
-    '</div><div class="setting-row-sub">' +
-    tr("appLockDesc") +
-    '</div></div></div><div class="toggle-switch' +
-    (state.appLock ? " on" : "") +
-    '" onclick="if(!state.appLock){showSetPIN()}else{state.appLock=false;state.lockPIN=\'\';this.classList.remove(\'on\');save();renderSettings()}"><div class="knob"></div></div></div>';
-  html +=
-    '<div class="setting-row" onclick="state.privacyMode=!state.privacyMode;save();renderSettings()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(59,130,246,.12);color:#3B82F6">' +
-    ics("eye", 16, 16) +
-    '</div><div class="setting-row-info"><div class="setting-row-label">' +
-    tr("privacyMode") +
-    '</div><div class="setting-row-sub">' +
-    tr("privacyModeDesc") +
-    '</div></div></div><div class="toggle-switch' +
-    (state.privacyMode ? " on" : "") +
-    '"><div class="knob"></div></div></div>';
-  html +=
-    '<button class="setting-action-btn" onclick="resetSettings()">' +
-    ics("refresh", 16, 16) +
-    " " +
-    tr("resetSettings") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="clearCache()">' +
-    ics("trash2", 16, 16) +
-    " " +
-    tr("clearCache") +
-    "</button>";
-  html +=
-    '<button class="setting-action-btn" onclick="showResetDialog()">' +
-    ics("alertTriangle", 16, 16) +
-    " " +
-    tr("deleteAllData") +
-    "</button>";
-  html += "</div></div>";
-  c.innerHTML = html;
-  updateStorageInfo();
+
+  if (!currentSettingsSubPage || currentSettingsSubPage === "main") {
+    html += '<div style="padding-top:10px">';
+    html += '<div class="settings-nav-card" onclick="openSettingsSubPage(\'general\')">' +
+      '<div class="settings-nav-icon" style="background:rgba(22,163,74,.12);color:var(--brand-primary,#15803D)">' +
+      ics("sliders", 20, 20) +
+      '</div><div class="settings-nav-info">' +
+      '<div class="settings-nav-title">' + tr("settingsGroupGeneral") + '</div>' +
+      '<div class="settings-nav-sub">App preferences, language, currency & sorting</div>' +
+      '</div><div class="settings-nav-value">' + curLang + '</div>' +
+      '<div class="settings-nav-chevron">' + ics("chevronRight", 18, 18) + '</div>' +
+      '</div>';
+
+    var themeLabels = { light: tr("lightMode"), dark: tr("darkMode"), system: tr("systemTheme") };
+    html += '<div class="settings-nav-card" onclick="openSettingsSubPage(\'appearance\')">' +
+      '<div class="settings-nav-icon" style="background:rgba(245,158,11,.12);color:#D97706">' +
+      ics("sun", 20, 20) +
+      '</div><div class="settings-nav-info">' +
+      '<div class="settings-nav-title">' + tr("settingsGroupAppearance") + '</div>' +
+      '<div class="settings-nav-sub">Visual theme and text size</div>' +
+      '</div><div class="settings-nav-value">' + (themeLabels[state.themeMode] || tr("lightMode")) + '</div>' +
+      '<div class="settings-nav-chevron">' + ics("chevronRight", 18, 18) + '</div>' +
+      '</div>';
+
+    html += '<div class="settings-nav-card" onclick="openSettingsSubPage(\'notifications\')">' +
+      '<div class="settings-nav-icon" style="background:rgba(59,130,246,.12);color:#2563EB">' +
+      ics("bell", 20, 20) +
+      '</div><div class="settings-nav-info">' +
+      '<div class="settings-nav-title">' + tr("settingsGroupNotifications") + '</div>' +
+      '<div class="settings-nav-sub">Food expiry reminders & alert timing</div>' +
+      '</div><div class="settings-nav-value">' + (state.notificationsOn ? tr("enabled") : tr("disabled")) + '</div>' +
+      '<div class="settings-nav-chevron">' + ics("chevronRight", 18, 18) + '</div>' +
+      '</div>';
+
+    html += '<div class="settings-nav-card" onclick="openSettingsSubPage(\'data\')">' +
+      '<div class="settings-nav-icon" style="background:rgba(16,185,129,.12);color:#059669">' +
+      ics("archive", 20, 20) +
+      '</div><div class="settings-nav-info">' +
+      '<div class="settings-nav-title">' + tr("settingsGroupOffline") + '</div>' +
+      '<div class="settings-nav-sub">Backup, export/import CSV, storage & cleanup</div>' +
+      '</div><div class="settings-nav-value">' + state.items.length + ' ' + tr("items") + '</div>' +
+      '<div class="settings-nav-chevron">' + ics("chevronRight", 18, 18) + '</div>' +
+      '</div>';
+
+    html += '<div class="settings-nav-card" onclick="openSettingsSubPage(\'security\')">' +
+      '<div class="settings-nav-icon" style="background:rgba(139,92,246,.12);color:#7C3AED">' +
+      ics("shield", 20, 20) +
+      '</div><div class="settings-nav-info">' +
+      '<div class="settings-nav-title">' + tr("security") + '</div>' +
+      '<div class="settings-nav-sub">App lock PIN, privacy mode & cache reset</div>' +
+      '</div><div class="settings-nav-value">' + (state.appLock ? tr("locked") : tr("unlocked")) + '</div>' +
+      '<div class="settings-nav-chevron">' + ics("chevronRight", 18, 18) + '</div>' +
+      '</div>';
+
+    html += '<div class="settings-nav-card" onclick="openSettingsSubPage(\'about\')">' +
+      '<div class="settings-nav-icon" style="background:rgba(22,163,74,.12);color:var(--brand-primary,#15803D)">' +
+      ics("info", 20, 20) +
+      '</div><div class="settings-nav-info">' +
+      '<div class="settings-nav-title">' + tr("settingsGroupAbout") + '</div>' +
+      '<div class="settings-nav-sub">App information, official logo, FAQ & support</div>' +
+      '</div><div class="settings-nav-value">v1.0</div>' +
+      '<div class="settings-nav-chevron">' + ics("chevronRight", 18, 18) + '</div>' +
+      '</div>';
+
+    html += '</div>';
+    c.innerHTML = html;
+    return;
+  }
+
+  if (currentSettingsSubPage === "general") {
+    html += '<div class="settings-subpage">';
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("regionalSettings") + '</div><div class="settings-card">';
+    html += '<div class="setting-row" onclick="showLangSheet()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(22,163,74,.12);color:var(--brand-primary,#15803D)">' +
+      ics("globe", 16, 16) +
+      '</div><div class="setting-row-info"><div class="setting-row-label">' + tr("language") + '</div><div class="setting-row-sub">' + tr("appLanguage") + '</div></div></div><div class="setting-row-value">' + curLang + '</div>' + ics("chevronRight", 16, 16) + '</div>';
+    html += '<div class="setting-row" onclick="showCurrencyPicker()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(245,158,11,.12);color:#D97706">' +
+      ics("dollar", 16, 16) +
+      '</div><div class="setting-row-info"><div class="setting-row-label">' + tr("currency") + '</div><div class="setting-row-sub">' + tr("currencyDesc") + '</div></div></div><div class="setting-row-value">' + curSym + " " + state.currency + '</div>' + ics("chevronRight", 16, 16) + '</div>';
+    html += '<div class="setting-row" onclick="showDateFormatPicker()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(6,182,212,.12);color:#0891B2">' +
+      ics("calendar", 16, 16) +
+      '</div><div class="setting-row-info"><div class="setting-row-label">' + tr("dateFormat") + '</div><div class="setting-row-sub">' + tr("dateFormatDesc") + '</div></div></div><div class="setting-row-value">' + state.dateFormat + '</div>' + ics("chevronRight", 16, 16) + '</div>';
+    html += '<div class="setting-row" onclick="showUnitPicker()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(139,92,246,.12);color:#7C3AED">' +
+      ics("ruler", 16, 16) +
+      '</div><div class="setting-row-info"><div class="setting-row-label">' + tr("measurement") + '</div><div class="setting-row-sub">' + tr("measurementDesc") + '</div></div></div><div class="setting-row-value">' + tr(state.measureUnit === "metric" ? "metricUnit" : "imperialUnit") + '</div>' + ics("chevronRight", 16, 16) + '</div>';
+    html += '</div></div>';
+
+    var curSort = state.sortBy || "expiry";
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("defaultSort") + '</div><div class="settings-card"><div class="sort-picker-row">';
+    var sortOptions = [
+      { key: "expiry", label: tr("sortByExpiry") },
+      { key: "name", label: tr("sortByName") },
+      { key: "newest", label: tr("sortByNewest") }
+    ];
+    sortOptions.forEach(function (opt) {
+      var isAct = curSort === opt.key;
+      html += '<button class="sort-picker-btn' + (isAct ? " active" : "") + '" onclick="state.sortBy=\'' + opt.key + '\';save();renderSettings();showToast(\'' + tr("sortUpdated") + '\');">' +
+        '<span>' + opt.label + '</span>' +
+        (isAct ? ics("check", 16, 16) : "") +
+        '</button>';
+    });
+    html += '</div></div></div>';
+
+    html += '</div>';
+    c.innerHTML = html;
+    return;
+  }
+
+  if (currentSettingsSubPage === "appearance") {
+    html += '<div class="settings-subpage">';
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("themeMode") + '</div><div class="settings-card">';
+    html += '<div class="theme-row" style="padding:12px 16px 8px"><button class="theme-btn' + (state.themeMode === "light" ? " active" : "") + '" onclick="state.themeMode=\'light\';state.isDark=false;applyTheme();save();renderSettings()">' +
+      ics("sun", 22, 22) + '<span>' + tr("lightMode") + '</span></button><button class="theme-btn' + (state.themeMode === "dark" ? " active" : "") + '" onclick="state.themeMode=\'dark\';state.isDark=true;applyTheme();save();renderSettings()">' +
+      ics("moon", 22, 22) + '<span>' + tr("darkMode") + '</span></button><button class="theme-btn' + (state.themeMode === "system" ? " active" : "") + '" onclick="state.themeMode=\'system\';state.isDark=window.matchMedia&&window.matchMedia(\'(prefers-color-scheme:dark)\').matches;applyTheme();save();renderSettings()">' +
+      ics("monitor", 22, 22) + '<span>' + tr("systemTheme") + '</span></button></div>';
+    html += '</div></div>';
+
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("accentColor") + '</div><div class="settings-card">';
+    html += '<div style="padding:12px 16px 8px"><div class="accent-row">';
+    ["green", "blue", "purple", "orange"].forEach(function (a) {
+      html += '<div class="accent-dot' + (state.accentColor === a ? " active" : "") + '" style="color:' + accentColors[a] + ";background:" + accentColors[a] + '22" onclick="state.accentColor=\'' + a + '\';applyAccent();save();renderSettings()">' +
+        (state.accentColor === a ? ics("check", 16, 16) : "") + '</div>';
+    });
+    html += '</div></div></div>';
+
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("fontSize") + '</div><div class="settings-card">';
+    html += '<div style="padding:12px 16px 8px"><div class="font-row"><button class="font-btn s' + (state.fontSize === "s" ? " active" : "") + '" onclick="state.fontSize=\'s\';applyFont();save();renderSettings()">' + tr("small") + '</button><button class="font-btn m' + (state.fontSize === "m" ? " active" : "") + '" onclick="state.fontSize=\'m\';applyFont();save();renderSettings()">' + tr("medium") + '</button><button class="font-btn l' + (state.fontSize === "l" ? " active" : "") + '" onclick="state.fontSize=\'l\';applyFont();save();renderSettings()">' + tr("large") + '</button></div></div></div>';
+
+    html += '</div>';
+    c.innerHTML = html;
+    return;
+  }
+
+  if (currentSettingsSubPage === "notifications") {
+    html += '<div class="settings-subpage">';
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("settingsGroupNotifications") + '</div><div class="settings-card">';
+    html += '<div class="setting-row"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(59,130,246,.12);color:#2563EB">' +
+      ics("bell", 16, 16) + '</div><div class="setting-row-info"><div class="setting-row-label">' + tr("enableNotifications") + '</div><div class="setting-row-sub">' + tr("expiryReminder") + '</div></div></div><div class="toggle-switch' + (state.notificationsOn ? " on" : "") + '" onclick="state.notificationsOn=!state.notificationsOn;this.classList.toggle(\'on\');save()"><div class="knob"></div></div></div>';
+    html += '<div style="padding:8px 16px 12px"><label style="font-size:12px;font-weight:600;color:var(--muted);display:block;margin-bottom:6px">' + tr("notificationTime") + '</label><input type="time" class="time-input" value="' + state.notificationTime + '" onchange="state.notificationTime=this.value;save()"></div>';
+    html += '<div style="padding:0 16px 12px"><div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:8px">' + tr("remindBefore") + '</div><div class="reminder-row">';
+    [1, 3, 7, 15, 30].forEach(function (d) {
+      var checked = state.reminderDays.indexOf(d) >= 0;
+      html += '<label><input type="checkbox"' + (checked ? " checked" : "") + ' onchange="var r=state.reminderDays;var idx=r.indexOf(' + d + ');if(idx>=0)r.splice(idx,1);else r.push(' + d + ');state.reminderDays=r.sort(function(a,b){return a-b});save()"> ' + d + " " + tr("daysBefore") + '</label>';
+    });
+    html += '</div></div></div></div>';
+
+    html += '<div class="settings-notice-box">' + ics("info", 20, 20) + '<div>' + tr("localNotificationsNotice") + '</div></div>';
+    html += '</div>';
+    c.innerHTML = html;
+    return;
+  }
+
+  if (currentSettingsSubPage === "data") {
+    html += '<div class="settings-subpage">';
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("storageOverview") + '</div><div class="settings-card">';
+    html += '<div class="setting-row" onclick="installApp()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(16,185,129,.12);color:#059669">' + ics("download", 16, 16) + '</div><div class="setting-row-info"><div class="setting-row-label">' + tr("installApp") + '</div><div class="setting-row-sub">' + tr("installAppDesc") + '</div></div></div><div class="setting-row-value">' + (pwaInstalled ? tr("installed") : tr("notInstalled")) + '</div>' + ics("chevronRight", 16, 16) + '</div>';
+    html += '<div class="setting-row"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(59,130,246,.12);color:#2563EB">' + ics(navigator.onLine ? "wifi" : "offline", 16, 16) + '</div><div class="setting-row-info"><div class="setting-row-label">' + (navigator.onLine ? tr("online") : tr("offline")) + '</div><div class="setting-row-sub">' + tr("pwaDesc") + '</div></div></div><div class="setting-row-value">' + (navigator.onLine ? tr("online") : tr("offline")) + '</div></div>';
+    html += '<div class="storage-info" id="storageInfo"></div>';
+    html += '</div></div>';
+
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("backupExport") + '</div><div class="settings-card">';
+    html += '<button class="setting-action-btn" onclick="exportBackup()">' + ics("download", 16, 16) + " " + tr("exportBackup") + '</button>';
+    html += '<button class="setting-action-btn" onclick="document.getElementById(\'backupFileInput\').click()">' + ics("upload", 16, 16) + " " + tr("importBackup") + '</button>';
+    html += '<button class="setting-action-btn" onclick="exportAllData()">' + ics("archive", 16, 16) + " " + tr("exportAllData") + '</button>';
+    html += '<button class="setting-action-btn" onclick="exportCSV()">' + ics("file", 16, 16) + " " + tr("csv") + '</button>';
+    html += '<button class="setting-action-btn" onclick="document.getElementById(\'csvFileInput\').click()">' + ics("upload", 16, 16) + " " + tr("importCsv") + '</button>';
+    html += '<div class="setting-row"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(139,92,246,.12);color:#7C3AED">' + ics("refresh", 16, 16) + '</div><div class="setting-row-info"><div class="setting-row-label">' + tr("autoBackup") + '</div><div class="setting-row-sub">' + tr("autoBackupDesc") + '</div></div></div><div class="toggle-switch' + (state.autoBackup ? " on" : "") + '" onclick="state.autoBackup=!state.autoBackup;this.classList.toggle(\'on\');save()"><div class="knob"></div></div></div>';
+    html += '</div></div>';
+
+    html += '<div class="settings-group"><div class="settings-group-title" style="color:#DC2626">' + tr("dangerZone") + '</div><div class="settings-card" style="border-color:rgba(220,38,38,.2)">';
+    html += '<button class="setting-action-btn" style="color:#DC2626" onclick="showClearShoppingListsDialog()">' + ics("shoppingBag", 16, 16) + " " + tr("clearShoppingLists") + '</button>';
+    html += '<button class="setting-action-btn" style="color:#DC2626" onclick="showDeleteExpiredDialog()">' + ics("alertTriangle", 16, 16) + " " + tr("deleteExpiredQ") + '</button>';
+    html += '<button class="setting-action-btn" style="color:#DC2626" onclick="showResetDialog()">' + ics("alertTriangle", 16, 16) + " " + tr("deleteAllData") + '</button>';
+    html += '</div></div>';
+
+    html += '</div>';
+    c.innerHTML = html;
+    updateStorageInfo();
+    return;
+  }
+
+  if (currentSettingsSubPage === "security") {
+    html += '<div class="settings-subpage">';
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("security") + '</div><div class="settings-card">';
+    html += '<div class="setting-row"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(220,38,38,.12);color:#DC2626">' + ics("lock", 16, 16) + '</div><div class="setting-row-info"><div class="setting-row-label">' + tr("appLock") + '</div><div class="setting-row-sub">' + tr("appLockDesc") + '</div></div></div><div class="toggle-switch' + (state.appLock ? " on" : "") + '" onclick="if(!state.appLock){showSetPIN()}else{state.appLock=false;state.lockPIN=\'\';this.classList.remove(\'on\');save();renderSettings()}"><div class="knob"></div></div></div>';
+    html += '<div class="setting-row" onclick="state.privacyMode=!state.privacyMode;save();renderSettings()"><div class="setting-row-left"><div class="setting-row-icon" style="background:rgba(59,130,246,.12);color:#2563EB">' + ics("eye", 16, 16) + '</div><div class="setting-row-info"><div class="setting-row-label">' + tr("privacyMode") + '</div><div class="setting-row-sub">' + tr("privacyModeDesc") + '</div></div></div><div class="toggle-switch' + (state.privacyMode ? " on" : "") + '"><div class="knob"></div></div></div>';
+    html += '</div></div>';
+
+    html += '<div class="settings-notice-box">' + ics("shield", 20, 20) + '<div>' + tr("dataProtectionNotice") + '</div></div>';
+
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("maintenance") + '</div><div class="settings-card">';
+    html += '<button class="setting-action-btn" onclick="clearCache()">' + ics("trash2", 16, 16) + " " + tr("clearCache") + '</button>';
+    html += '<button class="setting-action-btn" onclick="resetSettings()">' + ics("refresh", 16, 16) + " " + tr("resetSettings") + '</button>';
+    html += '</div></div>';
+
+    html += '</div>';
+    c.innerHTML = html;
+    return;
+  }
+
+  if (currentSettingsSubPage === "about") {
+    html += '<div class="settings-subpage">';
+    html += '<div class="settings-group"><div class="settings-card" style="text-align:center;padding:24px 16px 16px">';
+    html += '<div class="about-ft-logo-wrap">' +
+      '<img src="./logo.png" alt="FreshTrack" class="about-ft-logo-img" onerror="this.style.display=\'none\';if(this.nextElementSibling)this.nextElementSibling.style.display=\'block\'">' +
+      '<svg viewBox="0 0 100 100" fill="none" style="display:none"><circle cx="50" cy="50" r="45" stroke="#22C55E" stroke-width="2.5"/><path d="M50 25L50 50L65 60" stroke="#22C55E" stroke-width="3.5" stroke-linecap="round"/><circle cx="50" cy="50" r="3" fill="#22C55E"/></svg>' +
+      '</div>' +
+      '<h2 style="font-size:22px;font-weight:800;color:var(--text);margin:0 0 4px">' + tr("appName") + '</h2>' +
+      '<div style="font-size:12px;font-weight:700;color:var(--brand-primary,#15803D);margin-bottom:8px">' + tr("appVersion") + ' 1.0.0 (Build 2026.11)</div>' +
+      '<p style="font-size:13px;color:var(--muted);line-height:1.45;margin:0 auto;max-width:320px">' + tr("aboutTagline") + ' — Private, offline-first grocery inventory, expiry date tracking & smart shopping list assistant.</p></div></div>';
+
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("helpSupport") + '</div><div class="settings-card">';
+    html += '<button class="setting-action-btn" onclick="openSupportPage(\'faq\')">' + ics("helpCircle", 16, 16) + " " + tr("helpFaq") + '</button>';
+    html += '<button class="setting-action-btn" onclick="openSupportPage(\'contact\')">' + ics("mail", 16, 16) + " " + tr("contactSupport") + '</button>';
+    html += '<button class="setting-action-btn" onclick="openSupportPage(\'bug\')">' + ics("bug", 16, 16) + " " + tr("reportBug") + '</button>';
+    html += '<button class="setting-action-btn" onclick="openSupportPage(\'feature\')">' + ics("sparkles", 16, 16) + " " + tr("featureRequest") + '</button>';
+    html += '</div></div>';
+
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("settingsGroupLegal") + '</div><div class="settings-card">';
+    html += '<button class="setting-action-btn" onclick="openLegal(\'privacy\')">' + ics("lock", 16, 16) + " " + tr("privacyPolicy") + '</button>';
+    html += '<button class="setting-action-btn" onclick="openLegal(\'terms\')">' + ics("file", 16, 16) + " " + tr("termsOfService") + '</button>';
+    html += '<button class="setting-action-btn" onclick="openLegal(\'safety\')">' + ics("shield", 16, 16) + " " + tr("foodSafety") + '</button>';
+    html += '<button class="setting-action-btn" onclick="openLegal(\'disclaimer\')">' + ics("alertTriangle", 16, 16) + " " + tr("disclaimer") + '</button>';
+    html += '</div></div>';
+
+    html += '<div class="settings-group"><div class="settings-group-title">' + tr("shareFeedback") + '</div><div class="settings-card">';
+    html += '<button class="setting-action-btn" onclick="showToast(\'' + tr("ratingPrompt") + '\')">' + ics("star", 16, 16) + " " + tr("rateApp") + '</button>';
+    html += "<button class=\"setting-action-btn\" onclick=\"if(navigator.share)navigator.share({title:\'FreshTrack\',text:\'" + tr("shareText") + "\',url:window.location.href}).catch(function(){})\">" + ics("share", 16, 16) + " " + tr("shareApp") + "</button>";
+    html += '</div></div>';
+
+    html += '</div>';
+    c.innerHTML = html;
+    return;
+  }
 }
-/* ---------- Support center ---------- */
 function openSupportPage(page) {
   var content = "";
   if (page === "faq") {
@@ -21208,16 +21507,20 @@ function installApp() {
 }
 function registerSW() {
   if (!("serviceWorker" in navigator)) return;
-  var swCode =
-    "self.addEventListener('install',function(e){self.skipWaiting();e.waitUntil(caches.open('freshtrack-v1').then(function(c){return c.addAll(['./FreshTrack.html','./']);}).catch(function(){}));});" +
-    "self.addEventListener('activate',function(e){e.waitUntil(self.clients.claim());});" +
-    "self.addEventListener('fetch',function(e){e.respondWith(caches.match(e.request,{ignoreSearch:true}).then(function(r){if(r)return r;return fetch(e.request).then(function(res){if(res&&res.ok&&e.request.method==='GET'){var cl=res.clone();caches.open('freshtrack-v1').then(function(c){c.put(e.request,cl);}).catch(function(){});}return res;}).catch(function(){return caches.match('./FreshTrack.html');});}));});";
-  var blob = new Blob([swCode], { type: "text/javascript" });
-  var url = URL.createObjectURL(blob);
   navigator.serviceWorker
-    .register(url, { scope: "./" })
+    .register("./sw.js", { scope: "./" })
     .then(function () {})
-    .catch(function () {});
+    .catch(function () {
+      try {
+        var swCode =
+          "self.addEventListener('install',function(e){self.skipWaiting();e.waitUntil(caches.open('freshtrack-v1').then(function(c){return c.addAll(['./index.html','./FreshTrack.html','./','./logo.png','./manifest.json']);}).catch(function(){}));});" +
+          "self.addEventListener('activate',function(e){e.waitUntil(self.clients.claim());});" +
+          "self.addEventListener('fetch',function(e){e.respondWith(caches.match(e.request,{ignoreSearch:true}).then(function(r){if(r)return r;return fetch(e.request).then(function(res){if(res&&res.ok&&e.request.method==='GET'){var cl=res.clone();caches.open('freshtrack-v1').then(function(c){c.put(e.request,cl);}).catch(function(){});}return res;}).catch(function(){return caches.match('./index.html')||caches.match('./FreshTrack.html');});}));});";
+        var blob = new Blob([swCode], { type: "text/javascript" });
+        var url = URL.createObjectURL(blob);
+        navigator.serviceWorker.register(url, { scope: "./" }).catch(function () {});
+      } catch (e) {}
+    });
 }
 
 function fillStaticIcons() {
